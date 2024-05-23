@@ -17,4 +17,8 @@ function getComputerChoice() {
   if (computerChoice <= 0.33 ) {
       alert("Rock!");
   }
+  else if (computerChoice <= 0.67 ) {
+    alert("Paper!");
+}
+
 }
