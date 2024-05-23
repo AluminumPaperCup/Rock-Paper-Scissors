@@ -13,3 +13,8 @@
 let computerChoice = Math.random();
 console.log (computerChoice);
 
+function getComputerChoice() {
+  if (computerChoice <= 0.33 ) {
+      alert("Rock!");
+  }
+}
