@@ -25,5 +25,3 @@ else if (computerChoice > 0.67) {
     alert("Scissors!");
 }
 }
-
-getComputerChoice();
