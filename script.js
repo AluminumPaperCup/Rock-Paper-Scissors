@@ -21,4 +21,8 @@ function getComputerChoice() {
     alert("Paper!");
 }
 
+else if (computerChoice > 0.67) {
+    alert("Scissors!");
+}
+
 }
