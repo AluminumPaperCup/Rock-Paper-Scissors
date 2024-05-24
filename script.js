@@ -1,19 +1,9 @@
  //// Your JavaScript goes here!
 
-  // remember basic function syntax!!
-
-  // function nameOfFunction(a, b)  {
-  //  return (a , b);
-  // }
-
-// Create a new function named getComputerChoice
-// break down problem into components
-// see if we can get the computer to return just rock, it doesn't have to be random
-
 // These are the Global Scope variables
-let computerChoice = getComputerChoice();
+const humanSelection = getHumanChoice();
 
-let humanChoice = getHumanChoice();
+const computerSelection = getComputerChoice();
 
 let humanScore = 0;
 console.log(humanScore);
@@ -33,15 +23,15 @@ function getComputerChoice() {
   if (Math.random() <= 0.33 ) {
       alert("Rock!");
   }
-  else if (Math.random() <= 0.66 ) {
+  else if (Math.random() >= 0.66 ) {
     alert("Paper!");
 }
-  else if (Math.random() > 0.66) {
+  else if (Math.random()) {
     alert("Scissors!");
 }
 
 }
 
 function playRound(humanChoice, computerChoice) {
-  
+    
 }
