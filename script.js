@@ -13,6 +13,16 @@
 let computerChoice = Math.random();
 console.log (computerChoice);
 
+let humanScore = 0;
+console.log(humanScore);
+
+let computerScore = 0;
+console.log(computerScore);
+
+function getHumanChoice() {
+ console.log(prompt("Type in Rock, Paper, or Scissors!"));
+}
+
 function getComputerChoice() {
   if (computerChoice <= 0.33 ) {
       alert("Rock!");
@@ -20,11 +30,8 @@ function getComputerChoice() {
   else if (computerChoice <= 0.67 ) {
     alert("Paper!");
 }
-
-else if (computerChoice > 0.67) {
+  else if (computerChoice > 0.67) {
     alert("Scissors!");
 }
 
 }
-
-getComputerChoice();
