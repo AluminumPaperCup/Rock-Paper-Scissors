@@ -50,3 +50,6 @@ function playGame() {
     console.log(`Opponent Score ${computerScore}`);
   }
 }
+
+//Plays Game
+playGame();
