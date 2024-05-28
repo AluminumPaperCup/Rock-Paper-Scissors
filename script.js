@@ -17,7 +17,9 @@ function getComputerChoice() {
 }
 
 //Function that plays 1 round of game (game logic)
-function playRound() {
+function playRound(humanSelection, computerSelection) {
+  computerSelection = getComputerChoice();
+  humanSelection = prompt("Choose 'Rock, Paper, or Scissors' ").toLowerCase();
  
   if (humanSelection === computerSelection) {
     return (`Ya'll both suck! You both picked ${humanSelection}.`);
