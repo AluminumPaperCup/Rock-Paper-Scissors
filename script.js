@@ -15,3 +15,28 @@ function getComputerChoice() {
       return ("scissors");
     }
 }
+
+//Function that plays 1 round of game (game logic)
+function playRound() {
+ 
+  if (humanSelection === computerSelection) {
+    return (`Ya'll both suck! You both picked ${humanSelection}.`);
+  } 
+  else if (humanSelection === "rock" && computerSelection === "scissors") {
+
+    return (`You win! You picked ${humanSelection}.`)  
+  }
+  else if (humanSelection === "paper" && computerSelection === "rock") {
+
+    return (`You win! You picked ${humanSelection}.`);
+  }
+  else if (humanSelection === "scissors" && computerSelection === "paper") {
+
+    return (`You win! You picked ${humanSelection}.`);
+  }
+  else {
+
+    return (`You lose! Computer chose ${computerSelection} and that beats ${humanSelection}`);
+  
+}
+}
