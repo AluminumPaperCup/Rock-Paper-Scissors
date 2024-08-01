@@ -8,6 +8,12 @@ function getComputerChoice() {
   return poison[Math.floor(Math.random() * poison.length)];
 };
 
+// Selection process function that executes both computer and human choices
+function game(buttonId) {
+  let computerSelection = getComputerChoice();
+  let humanSelection = buttonId;
+  }
+
 //Function that plays 1 round of game (game logic)
 function playRound(humanSelection, computerSelection) {
   computerSelection = getComputerChoice();
