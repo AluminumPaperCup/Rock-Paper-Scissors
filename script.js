@@ -13,6 +13,8 @@ function game(buttonId) {
   let computerSelection = getComputerChoice();
   let humanSelection = buttonId;
   let result = playRound(humanSelection, computerSelection);
+  updateResult(result);
+  updateScores ();
   };
 
   //Event Listeners for each button selection of human selection
@@ -40,4 +42,17 @@ function playRound(humanSelection, computerSelection) {
     result = `You lose! Computer chose ${computerSelection} and that beats ${humanSelection}`;
   }
   return result;
+}
+
+// Results updater per match played
+function updateResult(result) {
+  const resultDiv = document.getElementById("result");
+  resultDiv.textContent = result;
+}
+
+function updateScores() {
+  const humanScoreDiv = document.getElementById("human-score");
+  const computerScoreDiv = document.getElementById("computer-score");
+  humanScoreDiv.textContent = `Human: ${humanScore}`;
+  computerScoreDiv.textContent = `Computer: ${computerScore}`;
 }
