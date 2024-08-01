@@ -20,7 +20,7 @@ function game(buttonId) {
   document.getElementById("paper").addEventListener("click" , () => game("paper"));
   document.getElementById("scissors").addEventListener("click" , () => game("scissors"));
 
-//Function that plays 1 round of game (game logic)
+// Function that plays 1 round of game (game logic)
 function playRound(humanSelection, computerSelection) {
   computerSelection = getComputerChoice();
   let result = '';
@@ -28,19 +28,14 @@ function playRound(humanSelection, computerSelection) {
   if (humanSelection === computerSelection) {
    result = `Ya'll both suck! You both picked ${humanSelection}.`;
   } 
-  else if (humanSelection === "rock" && computerSelection === "scissors") {
-    humanScore += 1;
-    result = `You win! You picked ${humanSelection}.`  
-  }
-  else if (humanSelection === "paper" && computerSelection === "rock") {
-    humanScore += 1;
-    result = `You win! You picked ${humanSelection}.`;
-  }
-  else if (humanSelection === "scissors" && computerSelection === "paper") {
+  else if (
+          (humanSelection === "rock" && computerSelection === "scissors") || 
+          (humanSelection === "paper" && computerSelection === "rock")    ||
+          (humanSelection === "scissors" && computerSelection === "paper") 
+    ) {
     humanScore += 1;
     result = `You win! You picked ${humanSelection}.`;
-  }
-  else {
+  } else {
     computerScore +=1;
     result = `You lose! Computer chose ${computerSelection} and that beats ${humanSelection}`;
   }
