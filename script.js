@@ -14,7 +14,7 @@ function game(buttonId) {
   let humanSelection = buttonId;
   let result = playRound(humanSelection, computerSelection);
   updateResult(result);
-  updateScores ();
+  updateScore ();
   };
 
   //Event Listeners for each button selection of human selection
@@ -48,9 +48,15 @@ function playRound(humanSelection, computerSelection) {
 function updateResult(result) {
   const resultDiv = document.getElementById("result");
   resultDiv.textContent = result;
+  if (humanScore === 5 ) {
+    resultDiv.textContent = 'YOU HAVE WON THE GAME MUAHAUHAUHAHUAHAUAHAH';
+  } else if (computerScore === 5) {
+    resultDiv.textContent = 'y0u s00k. It is time to revaluate thy life choices and reflect.';
+  } 
 }
 
-function updateScores() {
+// Score updater per match played
+function updateScore() {
   const humanScoreDiv = document.getElementById("human-score");
   const computerScoreDiv = document.getElementById("computer-score");
   humanScoreDiv.textContent = `Human: ${humanScore}`;
