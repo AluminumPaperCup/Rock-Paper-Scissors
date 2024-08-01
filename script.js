@@ -44,5 +44,5 @@ function playRound(humanSelection, computerSelection) {
     computerScore +=1;
     result = `You lose! Computer chose ${computerSelection} and that beats ${humanSelection}`;
   }
-  alert (result);
+  return result;
 }
