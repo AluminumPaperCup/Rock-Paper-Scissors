@@ -12,7 +12,7 @@ function getComputerChoice() {
 function game(buttonId) {
   let computerSelection = getComputerChoice();
   let humanSelection = buttonId;
-  playRound(humanSelection, computerSelection);
+  let result = playRound(humanSelection, computerSelection);
   };
 
   //Event Listeners for each button selection of human selection
