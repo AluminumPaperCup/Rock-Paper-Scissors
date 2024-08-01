@@ -41,15 +41,3 @@ function playRound(humanSelection, computerSelection) {
     return (`You lose! Computer chose ${computerSelection} and that beats ${humanSelection}`);
   }
 }
-
-//Lets 5 rounds be played and tracks score
-function playGame() {
-  for (let i = 0; i < 5; i++) {
-    console.log(playRound());
-    console.log(`Your score ${humanScore}`);
-    console.log(`Opponent Score ${computerScore}`);
-  }
-}
-
-//Plays Game
-playGame();
