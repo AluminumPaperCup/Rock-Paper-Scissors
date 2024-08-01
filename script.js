@@ -50,8 +50,10 @@ function updateResult(result) {
   resultDiv.textContent = result;
   if (humanScore === 5 ) {
     resultDiv.textContent = 'YOU HAVE WON THE GAME MUAHAUHAUHAHUAHAUAHAH';
+    location.reload();
   } else if (computerScore === 5) {
     resultDiv.textContent = 'y0u s00k. It is time to revaluate thy life choices and reflect.';
+    location.reload();
   } 
 }
 
