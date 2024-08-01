@@ -17,7 +17,8 @@ function game(buttonId) {
 
   //Event Listeners for each button selection of human selection
   document.getElementById("rock").addEventListener("click" , () => game("rock"));
-
+  document.getElementById("paper").addEventListener("click" , () => game("paper"));
+  document.getElementById("scissors").addEventListener("click" , () => game("scissors"));
 
 //Function that plays 1 round of game (game logic)
 function playRound(humanSelection, computerSelection) {
