@@ -15,6 +15,10 @@ function game(buttonId) {
   let result = playRound(humanSelection, computerSelection);
   };
 
+  //Event Listeners for each button selection of human selection
+  document.getElementById("rock").addEventListener("click" , () => game("rock"));
+
+
 //Function that plays 1 round of game (game logic)
 function playRound(humanSelection, computerSelection) {
   computerSelection = getComputerChoice();
@@ -39,4 +43,5 @@ function playRound(humanSelection, computerSelection) {
     computerScore +=1;
     result = `You lose! Computer chose ${computerSelection} and that beats ${humanSelection}`;
   }
+  alert (result);
 }
