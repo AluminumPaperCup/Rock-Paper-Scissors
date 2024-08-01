@@ -50,10 +50,14 @@ function updateResult(result) {
   resultDiv.textContent = result;
   if (humanScore === 5 ) {
     resultDiv.textContent = 'YOU HAVE WON THE GAME MUAHAUHAUHAHUAHAUAHAH';
-    setTimeout(function(){ location.reload(); }, 3000);
+    setTimeout(function() { 
+      location.reload(); 
+    }, 3000);
   } else if (computerScore === 5) {
     resultDiv.textContent = 'y0u s00k. It is time to revaluate thy life choices and reflect.';
-    setTimeout(function(){ location.reload(); }, 3000);
+    setTimeout(function() { 
+      location.reload();
+    }, 3000);
   } 
 }
 
