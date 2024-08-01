@@ -12,29 +12,31 @@ function getComputerChoice() {
 function game(buttonId) {
   let computerSelection = getComputerChoice();
   let humanSelection = buttonId;
-  }
+  let result = playRound(humanSelection, computerSelection);
+  };
 
 //Function that plays 1 round of game (game logic)
 function playRound(humanSelection, computerSelection) {
   computerSelection = getComputerChoice();
+  let result = '';
  
   if (humanSelection === computerSelection) {
-    return (`Ya'll both suck! You both picked ${humanSelection}.`);
+   result = `Ya'll both suck! You both picked ${humanSelection}.`;
   } 
   else if (humanSelection === "rock" && computerSelection === "scissors") {
     humanScore += 1;
-    return (`You win! You picked ${humanSelection}.`)  
+    result = `You win! You picked ${humanSelection}.`  
   }
   else if (humanSelection === "paper" && computerSelection === "rock") {
     humanScore += 1;
-    return (`You win! You picked ${humanSelection}.`);
+    result = `You win! You picked ${humanSelection}.`;
   }
   else if (humanSelection === "scissors" && computerSelection === "paper") {
     humanScore += 1;
-    return (`You win! You picked ${humanSelection}.`);
+    result = `You win! You picked ${humanSelection}.`;
   }
   else {
     computerScore +=1;
-    return (`You lose! Computer chose ${computerSelection} and that beats ${humanSelection}`);
+    result = `You lose! Computer chose ${computerSelection} and that beats ${humanSelection}`;
   }
 }
